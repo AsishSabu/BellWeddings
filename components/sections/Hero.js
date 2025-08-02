@@ -178,7 +178,7 @@ const Hero = () => {
       <motion.div
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-        className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/60 text-center z-20"
+        className="absolute hidden md:block bottom-4 left-1/2 -translate-x-1/2 text-white/60 text-center z-20"
       >
         <div className="text-xs mb-2">Scroll Down</div>
         <div className="w-6 h-10 border border-white/30 rounded-full flex justify-center">

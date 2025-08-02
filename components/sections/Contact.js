@@ -15,8 +15,8 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-rose-50 to-pink-50 relative overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="pt-20 pb-10 bg-gradient-to-br from-rose-50 to-pink-50 relative overflow-hidden">
+      <div className="container mx-auto px-2  md:px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-start mb-4">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -196,7 +196,7 @@ const Contact = () => {
                       viewport={{ once: true }}
                     >
                       <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                        <Button className="w-full bg-gradient-to-r from-rose-400 to-pink-500 hover:from-rose-500 hover:to-pink-600 text-white py-4 rounded-xl text-lg font-semibold">
+                        <Button className="w-full bg-gradient-to-r from-rose-400 to-pink-500 hover:from-rose-500 hover:to-pink-600 text-white py-4 rounded-xl text-xs md:text-sm  lg:text-lg font-semibold">
                           Begin Our Journey Together
                           <ArrowRight className="ml-2 h-5 w-5" />
                         </Button>
@@ -221,11 +221,11 @@ const Contact = () => {
               <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-2xl overflow-hidden">
                 <CardContent className="p-0">
                   {/* Map Header */}
-                  <div className="px-6 py-2 bg-gradient-to-r from-rose-500 to-pink-500 text-white">
+                  <div className=" px-4 md:px-6 py-2 bg-gradient-to-r from-rose-500 to-pink-500 text-white ">
                     <div className="flex items-center justify-between">
                       <div>
-                        <h3 className="text-xl font-bold mb-1">Visit Our Office</h3>
-                        <p className="text-rose-100 text-sm">Wedding Plaza, MG Road, Bangalore</p>
+                        <h3 className="text-sm md:text-xl font-bold mb-1">Visit Our Office</h3>
+                        <p className="text-rose-100 text-xs md:text-sm">Wedding Plaza, MG Road, Bangalore</p>
                       </div>
                       <Globe className="h-8 w-8 text-rose-200" />
                     </div>
