@@ -1,14 +1,18 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
-import Image from "next/image"
-import { portfolioData } from "@/data/portfolio"
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+import { portfolioData } from "@/data/portfolio";
+import Link from "next/link";
 
 const Portfolio = () => {
   return (
-    <section id="portfolio" className="py-32 bg-gradient-to-br from-sky-50 to-blue-50 relative overflow-hidden">
+    <section
+      id="portfolio"
+      className="py-20 bg-gradient-to-br from-pink-50 to-rose-50 relative overflow-hidden"
+    >
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -22,13 +26,13 @@ const Portfolio = () => {
             whileInView={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
             viewport={{ once: true }}
-            className="inline-flex items-center bg-gradient-to-r from-blue-100 to-sky-100 text-blue-700 px-6 py-3 rounded-full text-sm font-medium border border-blue-200 mb-6"
+            className="inline-flex items-center bg-gradient-to-r from-rose-100 to-pink-100 text-rose-700 px-6 py-3 rounded-full text-sm font-medium border border-rose-200 mb-6"
           >
             Our Creations
           </motion.div>
           <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             Recent
-            <span className="block bg-gradient-to-r from-blue-500 to-sky-500 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-rose-500 to-pink-500 bg-clip-text text-transparent">
               Celebrations
             </span>
           </h2>
@@ -78,18 +82,20 @@ const Portfolio = () => {
           className="text-center mt-16"
         >
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-blue-400 to-sky-500 hover:from-blue-500 hover:to-sky-600 text-white rounded-full px-8 shadow-lg"
-            >
-              View Full Portfolio
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link href="/gallery">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-rose-400 to-pink-500 hover:from-rose-500 hover:to-pink-600 text-white rounded-full px-8 shadow-lg py-2"
+              >
+                View Full Gallery
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Portfolio
+export default Portfolio;

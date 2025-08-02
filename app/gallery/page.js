@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { ArrowLeft, Heart, Calendar, MapPin } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-import Header from "@/components/layout/Header"
-import Footer from "@/components/layout/Footer"
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, Heart, Calendar, MapPin } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 const Gallery = () => {
   const galleryImages = [
     {
       id: 1,
-      image: "/placeholder.svg?height=600&width=400&text=Wedding Ceremony 1",
+      image: "/gallery/img1.jpg",
       title: "Royal Heritage Wedding",
       location: "City Palace, Udaipur",
       date: "December 2023",
@@ -20,7 +20,7 @@ const Gallery = () => {
     },
     {
       id: 2,
-      image: "/placeholder.svg?height=600&width=400&text=Beach Wedding 2",
+      image: "/gallery/img2.jpg",
       title: "Beachside Celebration",
       location: "Taj Resort, Goa",
       date: "November 2023",
@@ -28,7 +28,7 @@ const Gallery = () => {
     },
     {
       id: 3,
-      image: "/placeholder.svg?height=600&width=400&text=Garden Wedding 3",
+      image: "/gallery/img3.jpg",
       title: "Garden Paradise",
       location: "Backwater Resort, Kerala",
       date: "October 2023",
@@ -36,7 +36,7 @@ const Gallery = () => {
     },
     {
       id: 4,
-      image: "/placeholder.svg?height=600&width=400&text=Modern Wedding 4",
+      image: "/gallery/img4.jpg",
       title: "Modern Luxury",
       location: "5-Star Hotel, Mumbai",
       date: "September 2023",
@@ -44,7 +44,7 @@ const Gallery = () => {
     },
     {
       id: 5,
-      image: "/placeholder.svg?height=600&width=400&text=Traditional Wedding 5",
+      image: "/gallery/img5.jpg",
       title: "Traditional Elegance",
       location: "Heritage Hotel, Jaipur",
       date: "August 2023",
@@ -52,7 +52,7 @@ const Gallery = () => {
     },
     {
       id: 6,
-      image: "/placeholder.svg?height=600&width=400&text=Mountain Wedding 6",
+      image: "/gallery/img6.jpg",
       title: "Mountain Retreat",
       location: "Hill Station, Shimla",
       date: "July 2023",
@@ -60,7 +60,7 @@ const Gallery = () => {
     },
     {
       id: 7,
-      image: "/placeholder.svg?height=600&width=400&text=Palace Wedding 7",
+      image: "/gallery/img7.jpg",
       title: "Palace Grandeur",
       location: "Lake Palace, Udaipur",
       date: "June 2023",
@@ -68,7 +68,7 @@ const Gallery = () => {
     },
     {
       id: 8,
-      image: "/placeholder.svg?height=600&width=400&text=Intimate Wedding 8",
+      image: "/gallery/img8.jpg",
       title: "Intimate Celebration",
       location: "Private Villa, Lonavala",
       date: "May 2023",
@@ -76,15 +76,23 @@ const Gallery = () => {
     },
     {
       id: 9,
-      image: "/placeholder.svg?height=600&width=400&text=Destination Wedding 9",
+      image: "/gallery/img9.jpg",
       title: "Tropical Paradise",
       location: "Beach Resort, Maldives",
       date: "April 2023",
       category: "Destination",
     },
-  ]
+  ];
 
-  const categories = ["All", "Traditional", "Modern", "Destination", "Outdoor", "Luxury", "Intimate"]
+  const categories = [
+    "All",
+    "Traditional",
+    "Modern",
+    "Destination",
+    "Outdoor",
+    "Luxury",
+    "Intimate",
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -99,7 +107,10 @@ const Gallery = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <Link href="/" className="inline-flex items-center text-rose-600 hover:text-rose-700 mb-6 font-medium">
+            <Link
+              href="/"
+              className="inline-flex items-center text-rose-600 hover:text-rose-700 mb-6 font-medium"
+            >
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Home
             </Link>
@@ -110,7 +121,8 @@ const Gallery = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore our collection of beautiful weddings and celebrations we've had the honor to plan and execute
+              Explore our collection of beautiful weddings and celebrations
+              we've had the honor to plan and execute
             </p>
           </motion.div>
 
@@ -179,7 +191,9 @@ const Gallery = () => {
 
                 {/* Card Content */}
                 <div className="p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                    {item.title}
+                  </h3>
                   <div className="flex items-center text-gray-600 text-sm mb-2">
                     <MapPin className="h-4 w-4 mr-1" />
                     {item.location}
@@ -204,8 +218,11 @@ const Gallery = () => {
             viewport={{ once: true }}
             className="text-center mt-12"
           >
-            <Button size="lg" className="bg-rose-500 hover:bg-rose-600 text-white rounded-full px-8">
-              Load More Weddings
+            <Button
+              size="lg"
+              className="bg-rose-500 hover:bg-rose-600 text-white rounded-full px-8 py-2"
+            >
+              View More
             </Button>
           </motion.div>
         </div>
@@ -213,7 +230,7 @@ const Gallery = () => {
 
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Gallery
+export default Gallery;

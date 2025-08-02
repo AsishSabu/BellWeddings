@@ -9,7 +9,7 @@ import { testimonialsData } from "@/data/testimonials"
 
 const Testimonials = () => {
   return (
-    <section className="py-32 bg-white relative overflow-hidden">
+    <section className="py-24 bg-white relative overflow-hidden">
       {/* Background Pattern */}
       <motion.div
         animate={{
@@ -21,7 +21,7 @@ const Testimonials = () => {
           repeat: Number.POSITIVE_INFINITY,
           ease: "linear",
         }}
-        className="absolute top-20 left-20 w-48 h-48 border-2 border-blue-100 rounded-full opacity-40"
+        className="absolute top-20 left-20 w-48 h-48 border-2 border-rose-100 rounded-full opacity-40"
       />
 
       <div className="container mx-auto px-4 relative z-10">
@@ -37,13 +37,13 @@ const Testimonials = () => {
             whileInView={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
             viewport={{ once: true }}
-            className="inline-flex items-center bg-gradient-to-r from-blue-100 to-sky-100 text-blue-700 px-6 py-3 rounded-full text-sm font-medium border border-blue-200 mb-6"
+            className="inline-flex items-center bg-gradient-to-r from-rose-100 to-pink-100 text-rose-700 px-6 py-3 rounded-full text-sm font-medium border border-rose-200 mb-6"
           >
             Client Stories
           </motion.div>
           <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             Love
-            <span className="block bg-gradient-to-r from-blue-500 to-sky-500 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-rose-500 to-pink-500 bg-clip-text text-transparent">
               Stories
             </span>
           </h2>
@@ -61,7 +61,7 @@ const Testimonials = () => {
               transition={{ delay: index * 0.2, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <Card className="group bg-gradient-to-br from-white to-blue-50/30 border-0 shadow-lg hover:shadow-2xl transition-all duration-500 h-full relative overflow-hidden">
+              <Card className="group bg-gradient-to-br from-white to-rose-50/30 border-0 shadow-lg hover:shadow-2xl transition-all duration-500 h-full relative overflow-hidden rounded-md">
                 <motion.div
                   initial={{ scale: 0, rotate: -180 }}
                   whileInView={{ scale: 1, rotate: 0 }}
@@ -69,7 +69,7 @@ const Testimonials = () => {
                   viewport={{ once: true }}
                   className="absolute top-4 right-4"
                 >
-                  <Quote className="h-12 w-12 text-blue-200" />
+                  <Quote className="h-12 w-12 text-rose-200" />
                 </motion.div>
                 <CardContent className="p-8">
                   <motion.div
@@ -87,7 +87,7 @@ const Testimonials = () => {
                         transition={{ delay: index * 0.2 + 0.6 + i * 0.1, type: "spring", stiffness: 300 }}
                         viewport={{ once: true }}
                       >
-                        <Star className="h-5 w-5 text-blue-400 fill-current" />
+                        <Star className="h-5 w-5 text-rose-400 fill-current" />
                       </motion.div>
                     ))}
                   </motion.div>
@@ -97,7 +97,7 @@ const Testimonials = () => {
                   <div className="flex items-center">
                     <motion.div
                       whileHover={{ scale: 1.1 }}
-                      className="relative w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-blue-200"
+                      className="relative w-16 h-16 rounded-full overflow-hidden mr-4 border-2 border-rose-200"
                     >
                       <Image
                         src={testimonial.image || "/placeholder.svg"}
@@ -108,7 +108,7 @@ const Testimonials = () => {
                     </motion.div>
                     <div>
                       <div className="font-bold text-gray-900 text-lg">{testimonial.name}</div>
-                      <div className="text-blue-600 text-sm">{testimonial.event}</div>
+                      <div className="text-rose-600 text-sm">{testimonial.event}</div>
                     </div>
                   </div>
                 </CardContent>
@@ -124,16 +124,6 @@ const Testimonials = () => {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-blue-300 text-blue-700 hover:bg-blue-50 rounded-full px-8 bg-transparent"
-            >
-              View All Testimonials
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </motion.div>
         </motion.div>
       </div>
     </section>

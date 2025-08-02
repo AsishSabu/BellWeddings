@@ -9,7 +9,6 @@ import { useState, useEffect } from "react";
 const Hero = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Sample wedding images - replace with actual wedding photos
   const heroImages = [
     "/hero/wedding1.jpg",
     "/hero/wedding2.jpg",

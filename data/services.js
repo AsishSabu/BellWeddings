@@ -1,4 +1,4 @@
-import { Calendar, Flower, Camera, Music, Utensils, Car } from "lucide-react"
+import { Calendar, Flower, Camera, Music, Utensils, Car } from "lucide-react";
 
 export const servicesData = [
   {
@@ -6,7 +6,7 @@ export const servicesData = [
     title: "Complete Wedding Planning",
     description:
       "From engagement to honeymoon, we handle every detail of your special day. Our comprehensive planning ensures a stress-free experience with personalized attention to your unique vision.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/services/img1.jpg",
     icon: Calendar,
   },
   {
@@ -14,7 +14,7 @@ export const servicesData = [
     title: "Venue Selection & Decoration",
     description:
       "Transform any space into your dream wedding venue. We specialize in stunning decorations, floral arrangements, and ambiance creation that reflects your personal style.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/services/img2.jpg",
     icon: Flower,
   },
   {
@@ -22,7 +22,7 @@ export const servicesData = [
     title: "Catering & Menu Planning",
     description:
       "Delight your guests with exquisite cuisine and professional catering services. From traditional to contemporary menus, we ensure every dish is perfect for your celebration.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/services/img3.jpg",
     icon: Utensils,
   },
   {
@@ -30,7 +30,7 @@ export const servicesData = [
     title: "Photography & Videography",
     description:
       "Capture every precious moment with our professional photography and videography services. We create timeless memories that you'll treasure for a lifetime.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/services/img4.jpg",
     icon: Camera,
   },
   {
@@ -38,7 +38,7 @@ export const servicesData = [
     title: "Entertainment & Music",
     description:
       "Keep your celebration lively with curated entertainment options. From live bands to DJs, we ensure your guests dance the night away with perfect musical arrangements.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/services/img1.jpg",
     icon: Music,
   },
   {
@@ -46,7 +46,7 @@ export const servicesData = [
     title: "Transportation & Logistics",
     description:
       "Seamless transportation arrangements for the couple and guests. We coordinate all logistics to ensure everyone arrives on time and in style for your special day.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/services/img1.jpg",
     icon: Car,
   },
-]
+];

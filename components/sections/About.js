@@ -6,11 +6,11 @@ import { aboutData } from "@/data/about"
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-blue-50 to-sky-50 relative overflow-hidden">
+    <section id="about" className="py-20 bg-gradient-to-br from-rose-50 to-pink-50 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 right-20 w-64 h-64 bg-blue-100/50 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-sky-100/30 rounded-full blur-3xl"></div>
+        <div className="absolute top-20 right-20 w-64 h-64 bg-rose-100/50 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-pink-100/30 rounded-full blur-3xl"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -26,13 +26,13 @@ const About = () => {
             whileInView={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
             viewport={{ once: true }}
-            className="inline-flex items-center bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-4 border border-blue-200"
+            className="inline-flex items-center bg-rose-100 text-rose-700 px-4 py-2 rounded-full text-sm font-medium mb-4 border border-rose-200"
           >
             Why Choose Us
           </motion.div>
           <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
             What Makes Us
-            <span className="block bg-gradient-to-r from-blue-500 to-sky-500 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-rose-500 to-pink-500 bg-clip-text text-transparent">
               Special
             </span>
           </h2>
@@ -51,18 +51,18 @@ const About = () => {
               transition={{ delay: index * 0.2, duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <Card className="group bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-500 h-full transform hover:-translate-y-1">
+              <Card className="group bg-white/80 backdrop-blur-sm border-0 shadow-lg hover:shadow-xl transition-all duration-500 h-full transform hover:-translate-y-1 rounded-lg">
                 <CardContent className="p-6 text-center">
                   <motion.div
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
                     transition={{ delay: index * 0.2 + 0.3, type: "spring", stiffness: 200 }}
                     viewport={{ once: true }}
-                    className="w-16 h-16 bg-gradient-to-br from-blue-400 to-sky-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg"
+                    className="w-16 h-16 bg-gradient-to-br from-rose-400 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg"
                   >
                     <item.icon className="h-8 w-8 text-white" />
                   </motion.div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-rose-600 transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-gray-600 leading-relaxed text-sm">{item.description}</p>

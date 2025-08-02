@@ -10,7 +10,7 @@ import Footer from "@/components/layout/Footer"
 
 export default function WeddingEventSite() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-sky-50">
+    <div className="min-h-screen bg-gradient-to-br from-rose-50 via-white to-pink-50">
       <Header />
       <main>
         <Hero />

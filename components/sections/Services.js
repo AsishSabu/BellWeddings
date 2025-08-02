@@ -28,12 +28,12 @@ const Services = () => {
   }
 
   return (
-    <section id="services" className="py-32 bg-gradient-to-br from-blue-50 to-sky-50 relative overflow-hidden">
+    <section id="services" className="py-20 bg-gradient-to-br from-rose-50 to-pink-50 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-20 w-40 h-40 border border-blue-300 rounded-full"></div>
-        <div className="absolute bottom-20 right-20 w-32 h-32 bg-blue-300 rounded-xl transform rotate-45"></div>
-        <div className="absolute top-1/2 left-1/2 w-24 h-24 border-2 border-sky-300 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute top-20 left-20 w-40 h-40 border border-rose-300 rounded-full"></div>
+        <div className="absolute bottom-20 right-20 w-32 h-32 bg-rose-300 rounded-xl transform rotate-45"></div>
+        <div className="absolute top-1/2 left-1/2 w-24 h-24 border-2 border-pink-300 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -49,13 +49,13 @@ const Services = () => {
             whileInView={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
             viewport={{ once: true }}
-            className="inline-flex items-center bg-gradient-to-r from-blue-100 to-sky-100 text-blue-700 px-6 py-3 rounded-full text-sm font-medium border border-blue-200 mb-6"
+            className="inline-flex items-center bg-gradient-to-r from-rose-100 to-pink-100 text-rose-700 px-6 py-3 rounded-full text-sm font-medium border border-rose-200 mb-6"
           >
             Our Expertise
           </motion.div>
           <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             Signature
-            <span className="block bg-gradient-to-r from-blue-500 to-sky-500 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-rose-500 to-pink-500 bg-clip-text text-transparent">
               Services
             </span>
           </h2>
@@ -89,25 +89,17 @@ const Services = () => {
                     viewport={{ once: true }}
                     className="absolute top-4 left-4"
                   >
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-sky-500 rounded-xl flex items-center justify-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-rose-400 to-pink-500 rounded-xl flex items-center justify-center">
                       <service.icon className="h-6 w-6 text-white" />
                     </div>
                   </motion.div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-rose-600 transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-gray-600 mb-4 leading-relaxed">{service.description}</p>
-                  <motion.div whileHover={{ x: 5 }}>
-                    <Button
-                      variant="ghost"
-                      className="text-blue-600 hover:text-blue-700 hover:bg-blue-50 p-0 h-auto font-semibold"
-                    >
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </motion.div>
+
                 </CardContent>
               </Card>
             </motion.div>
@@ -121,15 +113,15 @@ const Services = () => {
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          {/* <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-400 to-sky-500 hover:from-blue-500 hover:to-sky-600 text-white rounded-full px-8 shadow-lg"
+              className="bg-gradient-to-r from-rose-400 to-pink-500 hover:from-rose-500 hover:to-pink-600 text-white rounded-full px-8 shadow-lg"
             >
               View All Services
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </div>
     </section>

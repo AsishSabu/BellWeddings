@@ -1,31 +1,31 @@
-"use client";
+"use client"
 
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
-import Link from "next/link";
-import Image from "next/image";
+import { useState, useEffect } from "react"
+import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button"
+import { Menu, X } from "lucide-react"
+import Link from "next/link"
+import Image from "next/image"
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
-    { href: "#services", label: "Services" },
+    { href: "/#services", label: "Services" },
     { href: "/gallery", label: "Gallery" },
-    { href: "#contact", label: "Contact" },
-  ];
+    { href: "/#contact", label: "Contact" },
+  ]
 
   return (
     <motion.header
@@ -33,26 +33,15 @@ const Header = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/95 backdrop-blur-lg shadow-lg border-b border-gray-100"
-          : "bg-white/10 backdrop-blur-md"
+        isScrolled ? "bg-white/95 backdrop-blur-lg shadow-lg border-b border-gray-100" : "bg-white/10 backdrop-blur-md"
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-18">
           {/* Logo */}
-          <motion.div
-            whileHover={{ scale: 1.02 }}
-            className="flex items-center p-0 m-0"
-          >
-            <Link href="/" className="block p-0 m-0">
-              <Image
-                src="/logo.png"
-                alt="Bell Wedding Planners"
-                width={200}
-                height={160}
-                className="h-20 w-auto p-0 m-0 block"
-              />
+          <motion.div whileHover={{ scale: 1.02 }} className="flex items-center">
+            <Link href="/">
+              <Image src="/logo.png" alt="Bell Wedding Planners" width={140} height={90} className="h-20 w-auto py-1" />
             </Link>
           </motion.div>
 
@@ -68,15 +57,13 @@ const Header = () => {
                 <Link
                   href={item.href}
                   className={`relative font-medium text-base transition-all duration-300 group ${
-                    isScrolled
-                      ? "text-gray-800 hover:text-blue-600"
-                      : "text-white hover:text-blue-300"
+                    isScrolled ? "text-gray-800 hover:text-rose-600" : "text-white hover:text-rose-300"
                   }`}
                 >
                   {item.label}
                   <span
                     className={`absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
-                      isScrolled ? "bg-blue-600" : "bg-blue-300"
+                      isScrolled ? "bg-rose-600" : "bg-rose-300"
                     }`}
                   ></span>
                 </Link>
@@ -93,9 +80,7 @@ const Header = () => {
           >
             <Button
               className={`px-6 py-2 rounded-full font-medium text-sm transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 ${
-                isScrolled
-                  ? "bg-blue-500 hover:bg-blue-600 text-white"
-                  : "bg-white hover:bg-gray-100 text-blue-900"
+                isScrolled ? "bg-rose-500 hover:bg-rose-600 text-white" : "bg-white hover:bg-gray-100 text-rose-900"
               }`}
             >
               Get Quote
@@ -106,16 +91,10 @@ const Header = () => {
           <Button
             variant="ghost"
             size="icon"
-            className={`lg:hidden p-2 ${
-              isScrolled ? "text-gray-800" : "text-white"
-            }`}
+            className={`lg:hidden p-2 ${isScrolled ? "text-gray-800" : "text-white"}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
+            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
       </div>
@@ -133,20 +112,20 @@ const Header = () => {
               <Link
                 key={item.href}
                 href={item.href}
-                className="block text-gray-800 hover:text-blue-600 font-medium py-2 text-base transition-colors border-b border-gray-100 last:border-b-0"
+                className="block text-gray-800 hover:text-rose-600 font-medium py-2 text-base transition-colors border-b border-gray-100 last:border-b-0"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
-            <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white rounded-full py-2 font-medium text-sm mt-4">
+            <Button className="w-full bg-rose-500 hover:bg-rose-600 text-white rounded-full py-2 font-medium text-sm mt-4">
               Get Quote
             </Button>
           </div>
         </motion.div>
       )}
     </motion.header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
