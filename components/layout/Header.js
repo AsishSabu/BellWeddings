@@ -41,7 +41,7 @@ const Header = () => {
           {/* Logo */}
           <motion.div whileHover={{ scale: 1.02 }} className="flex items-center">
             <Link href="/">
-              <Image src="/logo.png" alt="Bell Wedding Planners" width={140} height={90} className="h-20 w-auto py-1" />
+              <Image src="/logo.png" alt="Bell Wedding Planners" width={140} height={90} className="h-12 md:h-20 w-auto py-1" />
             </Link>
           </motion.div>
 

@@ -50,7 +50,7 @@ const Footer = () => {
             className="lg:col-span-2"
           >
             <div className="mb-6">
-              <Image src="/logo.png" alt="Bell Wedding Planners" width={200} height={120} className="h-16 w-auto" />
+              <Image src="/logo.png" alt="Bell Wedding Planners" width={200} height={120} className="h-14 md:h-16 w-auto" />
             </div>
             <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-md">
               Creating magical wedding experiences with personalized planning, stunning decorations, and flawless
